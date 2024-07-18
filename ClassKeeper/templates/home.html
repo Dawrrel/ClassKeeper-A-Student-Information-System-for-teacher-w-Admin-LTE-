@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to the ClassKeeper: a Student Information Management System</h1>
+    <p class="lead">This is a simple system to manage student information.</p>
+    <hr class="my-4">
+    <p>You can register, login, and manage student data.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}" role="button">Register</a>
+    <a class="btn btn-success btn-lg" href="{{ url_for('login') }}" role="button">Login</a>
+</div>
+{% endblock %}

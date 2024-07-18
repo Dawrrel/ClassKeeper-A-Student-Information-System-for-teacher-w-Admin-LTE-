@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Add Student{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Add Student</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="student_number">Student Number</label>
+            <input type="text" class="form-control" id="student_number" name="student_number" required>
+        </div>
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="birthday">Birthday</label>
+            <input type="date" class="form-control" id="birthday" name="birthday" required>
+        </div>
+        <div class="form-group">
+            <label for="picture">Picture</label>
+            <input type="file" class="form-control" id="picture" name="picture">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age">Grades</label>
+            <input type="text" class="form-control" id="grades" name="grades" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="school_year">School Year</label>
+            <input type="text" class="form-control" id="school_year" name="school_year" required>
+        </div>
+        <div class="form-group">
+            <label for="course">Course</label>
+            <ul id="sortable" class="list-group">
+                <li class="list-group-item"><input type="checkbox" name="course" value="BSCS"> BSCS</li>
+                <li class="list-group-item"><input type="checkbox" name="course" value="BSIT"> BSIT</li>
+                <li class="list-group-item"><input type="checkbox" name="course" value="BSIS"> BSIS</li>
+            </ul>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Student</button>
+    </form>
+</div>
+{% endblock %}
